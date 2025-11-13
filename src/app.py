@@ -116,19 +116,52 @@ activities = {
         "schedule": "Tuesdays, 3:30 PM - 5:00 PM",
         "max_participants": 12,
         "participants": []
+    },
+    "Volleyball Team": {
+        "description": "Practice volleyball skills and compete in matches",
+        "schedule": "Wednesdays and Fridays, 4:30 PM - 6:00 PM",
+        "max_participants": 18,
+        "participants": []
+    },
+    "Track and Field": {
+        "description": "Train for sprinting, jumping, and throwing events",
+        "schedule": "Tuesdays and Thursdays, 4:00 PM - 5:30 PM",
+        "max_participants": 25,
+        "participants": []
+    },
+    "Ceramics Club": {
+        "description": "Learn pottery and hand-building techniques",
+        "schedule": "Thursdays, 3:30 PM - 5:00 PM",
+        "max_participants": 12,
+        "participants": []
+    },
+    "Film Club": {
+        "description": "Watch and analyze films; create short student films",
+        "schedule": "Mondays, 5:00 PM - 6:30 PM",
+        "max_participants": 20,
+        "participants": []
+    },
+    "Environmental Science Club": {
+        "description": "Work on sustainability projects and environmental research",
+        "schedule": "Wednesdays, 4:00 PM - 5:30 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Astronomy Club": {
+        "description": "Observe the night sky and learn about astronomy",
+        "schedule": "Fridays, 6:30 PM - 8:00 PM",
+        "max_participants": 20,
+        "participants": []
     }
 }
-
 
 @app.get("/")
 def root():
     return RedirectResponse(url="/static/index.html")
 
-
 @app.get("/activities")
 def get_activities():
     return activities
-
 
 @app.post("/activities/{activity_name}/signup")
 def signup_for_activity(activity_name: str, email: str):
