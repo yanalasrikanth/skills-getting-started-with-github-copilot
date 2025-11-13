@@ -38,6 +38,84 @@ activities = {
         "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
         "max_participants": 30,
         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+    },
+    "Soccer Team": {
+        "description": "Competitive soccer practices and matches",
+        "schedule": "Mondays, Wednesdays, 4:00 PM - 6:00 PM",
+        "max_participants": 22,
+        "participants": ["liam@mergington.edu", "noah@mergington.edu"]
+    },
+    "Swimming Club": {
+        "description": "Swim training and lifeguard skills",
+        "schedule": "Tuesdays and Thursdays, 5:00 PM - 6:30 PM",
+        "max_participants": 16,
+        "participants": ["ava@mergington.edu", "isabella@mergington.edu"]
+    },
+    "Art Studio": {
+        "description": "Explore painting, drawing, and mixed media",
+        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 18,
+        "participants": ["mia@mergington.edu", "amelia@mergington.edu"]
+    },
+    "School Orchestra": {
+        "description": "Practice ensemble pieces and perform at school events",
+        "schedule": "Fridays, 4:00 PM - 6:00 PM",
+        "max_participants": 40,
+        "participants": ["elijah@mergington.edu", "lucas@mergington.edu"]
+    },
+    "Debate Team": {
+        "description": "Develop public speaking, research, and argumentation skills",
+        "schedule": "Tuesdays, 4:00 PM - 5:30 PM",
+        "max_participants": 20,
+        "participants": ["emma@mergington.edu", "olivia@mergington.edu"]
+    },
+    "Mathletes Club": {
+        "description": "Practice problem solving and compete in math competitions",
+        "schedule": "Thursdays, 3:30 PM - 5:00 PM",
+        "max_participants": 15,
+        "participants": ["sophia@mergington.edu", "michael@mergington.edu"]
+    },
+    "Basketball Team": {
+        "description": "Practice basketball skills and compete in local tournaments",
+        "schedule": "Tuesdays and Thursdays, 4:00 PM - 6:00 PM",
+        "max_participants": 20,
+        "participants": []
+    },
+    "Tennis Club": {
+        "description": "Learn tennis fundamentals and participate in matches",
+        "schedule": "Wednesdays, 5:00 PM - 7:00 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Photography Club": {
+        "description": "Explore photography techniques and projects",
+        "schedule": "Thursdays, 4:00 PM - 5:30 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Drama Club": {
+        "description": "Put on plays and develop acting skills",
+        "schedule": "Mondays, 3:30 PM - 6:00 PM",
+        "max_participants": 20,
+        "participants": []
+    },
+    "Creative Writing Club": {
+        "description": "Work on writing projects and share your stories",
+        "schedule": "Fridays, 3:30 PM - 5:00 PM",
+        "max_participants": 15,
+        "participants": []
+    },
+    "Robotics Team": {
+        "description": "Build robots and compete in competitions",
+        "schedule": "Mondays, 4:00 PM - 6:00 PM",
+        "max_participants": 10,
+        "participants": []
+    },
+    "Science Club": {
+        "description": "Conduct experiments and participate in science fairs",
+        "schedule": "Tuesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 12,
+        "participants": []
     }
 }
 
@@ -63,6 +141,6 @@ def signup_for_activity(activity_name: str, email: str):
     activity = activities[activity_name]
 
     # Add student
-  # Validate student is not already signed up
+    # Validate student is not already signed up
     activity["participants"].append(email)
     return {"message": f"Signed up {email} for {activity_name}"}
